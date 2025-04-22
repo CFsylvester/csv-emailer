@@ -12,12 +12,16 @@ const config = {
       },
       colors: {
         navy: '#1e293b',
-        lightNavy: '#334155',
-        accent: '#0ea5e9',
+        deepNavy: '#1c2541', // the background color you showed
+        lightNavy: '#27345c',
       },
       boxShadow: {
-        neumorphic: '8px 8px 16px #121c2c, -8px -8px 16px #243b5e',
-        'neumorphic-inset': 'inset 8px 8px 16px #121c2c, inset -8px -8px 16px #243b5e',
+        neumorphic: `
+         0px 4px 12px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.3)
+        `,
+        'neumorphic-inset': `
+         inset 0px 2px 4px rgba(0, 0, 0, 0.5), inset 0px 1px 2px rgba(0, 0, 0, 0.3)
+        `,
       },
       gridTemplateColumns: {
         4: 'repeat(4, minmax(0, 1fr))',
