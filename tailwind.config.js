@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.{html,svg}",
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './public/**/*.{html,svg}'],
   theme: {
     extend: {
       screens: {
