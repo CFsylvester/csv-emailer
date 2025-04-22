@@ -12,16 +12,24 @@ const GridToggle: React.FC<GridToggleProps> = ({ on, onChange }) => (
   <button
     onClick={() => onChange(!on)}
     className={`
-        flex items-center
-        w-full h-10
-        bg-navy
-        rounded-lg
-        px-2
-        shadow-neumorphic
-        transition-all duration-200
-      `}
+      flex items-center
+      w-full h-12
+      bg-navy
+      rounded-lg
+      px-3
+      shadow-neumorphic
+      transition-all duration-200
+    `}
   >
-    <span className="text-white text-sm font-bold mr-2">Grid</span>
+    <div className="flex items-end mr-2">
+      <span className="text-white text-sm font-bold leading-tight">Grid</span>
+      <span className="text-[10px] text-gray-400 ml-1 mb-0">
+        <span className="xs:inline sm:hidden">(xs)</span>
+        <span className="hidden sm:inline md:hidden">(sm)</span>
+        <span className="hidden md:inline lg:hidden">(md)</span>
+        <span className="hidden lg:inline">(lg)</span>
+      </span>
+    </div>
 
     <div
       className={`
