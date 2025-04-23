@@ -1,19 +1,20 @@
 'use client';
 import React from 'react';
-import Icon from '@/components/Icons';
+import Icon from '@/components/Icon';
 
-type GridToggleProps = {
+type Props = {
   on: boolean;
   onChange: (on: boolean) => void;
   className?: string;
 };
 
-const GridToggle: React.FC<GridToggleProps> = ({ on, onChange }) => (
+const Toggle: React.FC<Props> = ({ on, onChange, className = '' }) => (
   <button
     onClick={() => onChange(!on)}
     className={`
+      ${className}
       flex items-center
-      w-full h-12
+      w-[118px] h-12
       bg-navy
       rounded-lg
       px-3
@@ -27,7 +28,9 @@ const GridToggle: React.FC<GridToggleProps> = ({ on, onChange }) => (
         <span className="xs:inline sm:hidden">(xs)</span>
         <span className="hidden sm:inline md:hidden">(sm)</span>
         <span className="hidden md:inline lg:hidden">(md)</span>
-        <span className="hidden lg:inline">(lg)</span>
+        <span className="hidden lg:inline xl:hidden">(lg)</span>
+        <span className="hidden xl:inline 2xl:hidden">(xl)</span>
+        <span className="hidden 2xl:inline">(2xl)</span>
       </span>
     </div>
 
@@ -41,9 +44,9 @@ const GridToggle: React.FC<GridToggleProps> = ({ on, onChange }) => (
         shadow-neumorphic-inset
       `}
     >
-      <Icon type="grid" filled={on} size={18} />
+      <Icon type="grid" active={on} size={18} />
     </div>
   </button>
 );
 
-export default GridToggle;
+export default Toggle;

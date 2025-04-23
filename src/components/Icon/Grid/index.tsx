@@ -1,9 +1,9 @@
 'use client';
 import React, { FC } from 'react';
 
-type GridIconProps = { filled: boolean; className?: string; size?: number };
+type Props = { active: boolean; className?: string; size?: number };
 
-const GridIcon: FC<GridIconProps> = ({ filled, className = '', size = 24 }) => {
+const IconGrid: FC<Props> = ({ active, className = '', size = 24 }) => {
   // Calculate spacing for a more balanced grid
   const cellSize = size / 4;
   const gap = size / 12;
@@ -28,7 +28,7 @@ const GridIcon: FC<GridIconProps> = ({ filled, className = '', size = 24 }) => {
             width={cellSize}
             height={cellSize}
             rx={cellSize / 4}
-            fill={filled ? '#22c55e' : '#334155'} // using lightNavy color
+            className={active ? 'fill-green-500' : 'fill-lightNavy'}
           />
         );
       })}
@@ -36,4 +36,4 @@ const GridIcon: FC<GridIconProps> = ({ filled, className = '', size = 24 }) => {
   );
 };
 
-export default GridIcon;
+export default IconGrid;

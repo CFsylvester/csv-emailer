@@ -3,23 +3,23 @@
 import React from 'react';
 
 // icons
-import GridIcon from './GridIcon';
+import IconGrid from './Grid';
 
 // types
 export type IconType = 'grid';
 
 export interface IconProps {
   type: IconType;
-  filled?: boolean;
+  active?: boolean;
   className?: string;
   size?: number;
 }
 
-const Icon: React.FC<IconProps> = ({ type, filled = false, className = '', size = 24 }) => {
+const Icon: React.FC<IconProps> = ({ type, active = false, className = '', size = 24 }) => {
   // Use a switch statement to return the appropriate icon
   switch (type) {
     case 'grid':
-      return <GridIcon filled={filled} className={className} size={size} />;
+      return <IconGrid active={active} className={className} size={size} />;
 
     default:
       return <></>;

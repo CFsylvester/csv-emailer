@@ -9,6 +9,8 @@ const config = {
         sm: '360px',
         md: '656px',
         lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
       },
       colors: {
         navy: '#1e293b',
@@ -22,15 +24,6 @@ const config = {
         'neumorphic-inset': `
          inset 0px 2px 4px rgba(0, 0, 0, 0.5), inset 0px 1px 2px rgba(0, 0, 0, 0.3)
         `,
-      },
-      gridTemplateColumns: {
-        4: 'repeat(4, minmax(0, 1fr))',
-        12: 'repeat(12, minmax(0, 1fr))',
-      },
-      spacing: {
-        '8px': '8px',
-        '16px': '16px',
-        '40px': '40px',
       },
     },
   },
