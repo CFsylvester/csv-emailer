@@ -15,14 +15,14 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         {/* DEV GRID TOGGLE */}
         {devMode && (
           <GridToggle
-            on={showGrid}
+            active={showGrid}
             onChange={setShowGrid}
             className="fixed bottom-8 right-4 z-20"
           />
         )}
 
         {/* DEV GRID OVERLAY */}
-        {showGrid && <GridOverlay />}
+        <GridOverlay active={showGrid} />
 
         {/* MAIN CONTENT */}
         <div className="z-0 grid-layout">{children}</div>

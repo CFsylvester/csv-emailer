@@ -3,14 +3,14 @@ import React from 'react';
 import Icon from '@/components/Icon';
 
 type Props = {
-  on: boolean;
-  onChange: (on: boolean) => void;
+  active: boolean;
+  onChange: (active: boolean) => void;
   className?: string;
 };
 
-const Toggle: React.FC<Props> = ({ on, onChange, className = '' }) => (
+const Toggle: React.FC<Props> = ({ active, onChange, className = '' }) => (
   <button
-    onClick={() => onChange(!on)}
+    onClick={() => onChange(!active)}
     className={`
       ${className}
       flex items-center
@@ -44,7 +44,7 @@ const Toggle: React.FC<Props> = ({ on, onChange, className = '' }) => (
         shadow-neumorphic-inset
       `}
     >
-      <Icon type="grid" active={on} size={18} />
+      <Icon type="grid" active={active} size={18} />
     </div>
   </button>
 );
