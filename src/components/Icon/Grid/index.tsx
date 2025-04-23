@@ -28,7 +28,7 @@ const IconGrid: FC<Props> = ({ active, className = '', size = 24 }) => {
             width={cellSize}
             height={cellSize}
             rx={cellSize / 4}
-            className={active ? 'fill-green-500' : 'fill-lightNavy'}
+            className={`${active ? 'fill-green-500' : 'fill-lightNavy'} transition-colors duration-300`}
           />
         );
       })}
